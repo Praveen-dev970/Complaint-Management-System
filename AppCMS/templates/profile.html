@@ -1,0 +1,70 @@
+{% extends "index.html" %}
+
+<head>
+<style>
+
+.page-footer{
+background-color:#00d1fb;
+bottom:0px;
+top:900px;
+position:relative;
+}
+</style> 
+</head>
+
+{% block content %}
+<div class="container"
+    <div class="content-section">
+      
+          <h2 class="account-heading">{{ user.username }}</h2>
+          <form method="post">
+  {% csrf_token %}
+
+  <!-- Show any non-field errors -->
+  {{ p_form.non_field_errors }}
+  {{ profile_update_form.non_field_errors }}
+
+  <!-- p_form (User model fields) -->
+  <div class="form-group">
+    {{ p_form.username.label_tag }}<br>
+    {{ p_form.username }}<br>
+    {{ p_form.username.errors }}
+  </div>
+
+  <div class="form-group">
+    {{ p_form.email.label_tag }}<br>
+    {{ p_form.email }}<br>
+    {{ p_form.email.errors }}
+  </div>
+
+  <!-- profile_update_form (Profile model fields) -->
+  <div class="form-group">
+    {{ profile_update_form.collegename.label_tag }}<br>
+    {{ profile_update_form.collegename }}<br>
+    {{ profile_update_form.collegename.errors }}
+  </div>
+
+  <div class="form-group">
+    {{ profile_update_form.contactnumber.label_tag }}<br>
+    {{ profile_update_form.contactnumber }}<br>
+    {{ profile_update_form.contactnumber.errors }}
+  </div>
+
+  <div class="form-group">
+    {{ profile_update_form.type_user.label_tag }}<br>
+    {{ profile_update_form.type_user }}<br>
+    {{ profile_update_form.type_user.errors }}
+  </div>
+
+  <div class="form-group">
+    {{ profile_update_form.Branch.label_tag }}<br>
+    {{ profile_update_form.Branch }}<br>
+    {{ profile_update_form.Branch.errors }}
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-2">Update</button>
+</form>
+
+        </div>
+    </div>
+{% endblock content %}
