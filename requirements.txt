@@ -1,6 +1,6 @@
 Django==3.2.25
 gunicorn==20.1.0
-crispy-forms==1.14.0
+django-crispy-forms==1.14.0
 reportlab==4.0
 phonenumbers==8.13.15
 django-phonenumber-field==8.0.0
