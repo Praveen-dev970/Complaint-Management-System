@@ -22,6 +22,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include('AppCMS.urls')),
+    path('', views.index, name='home'),
     path('index/',views.index, name='index'),
     path('aboutus/', views.aboutus, name='aboutus'),
     path('login_page/', views.login_page, name='login_page'),
