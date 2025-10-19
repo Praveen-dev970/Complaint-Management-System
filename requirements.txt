@@ -1,9 +1,0 @@
-Django==3.2.25
-gunicorn==20.1.0
-django-crispy-forms==1.14.0
-reportlab==3.6.13  # Older version that might have better wheel support
-phonenumbers==8.13.15
-django-phonenumber-field==8.0.0
-django-extensions==3.2.1
-pytz==2025.2
-sqlparse==0.4.4
